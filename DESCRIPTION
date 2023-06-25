@@ -4,8 +4,7 @@ Version: 0.0.0.9000
 Authors@R: 
     person("Chris", "Dean", , "cdeanjbio@gmail.com", role = c("aut", "cre"))
 Description: This package provides convenience functions for visualizing contamination in microbiome experiments.
-License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
-    license
+License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.2.3.9000
