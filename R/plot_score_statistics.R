@@ -14,5 +14,13 @@
 #' plot_score_statistics(contam_results)
 plot_score_statistics <- function(x) {
   if(nrow(x) == 0) { stop("Data frame is empty") }
-  hist(x$p)
+
+  x <- x[!is.na(x$p),]
+
+  ggp <- ggplot(x, aes(x = p)) +
+    geom_histogram() +
+    labs(x = "Score statistic", y = "Frequency") +
+    theme_minimal()
+
+  return(ggp)
 }
