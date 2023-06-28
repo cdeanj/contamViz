@@ -8,6 +8,10 @@
 #' @return A ggplot object showing the distribution of score statistics assigned to each sequence feature.
 #' @export
 #'
+#' @import decontam
+#' @import ggplot2
+#' @import phyloseq
+#'
 #' @examples
 #' physeq <- readRDS(system.file("extdata", "MUClite.rds", package="decontam"))
 #' contam_results <- decontam::isContaminant(physeq, method = 'frequency', conc="quant_reading")
