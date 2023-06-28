@@ -22,8 +22,8 @@ This is a basic example which shows you how to solve a common problem:
 
 ``` r
 library(contamViz)
-#' physeq <- readRDS(system.file("extdata", "MUClite.rds", package="decontam"))
-#' contam_results <- decontam::isContaminant(physeq, method = 'frequency', conc="quant_reading")
-#' plot_score_statistics(contam_results)
+physeq <- readRDS(system.file("extdata", "MUClite.rds", package="decontam"))
+contam_results <- decontam::isContaminant(physeq, method = 'frequency', conc="quant_reading")
+plot_score_statistics(contam_results)
 ```
 
