@@ -11,3 +11,5 @@ RoxygenNote: 7.2.3.9000
 Imports:
     decontam,
     phyloseq
+URL: https://github.com/cdeanj/contamViz
+BugReports: https://github.com/cdeanj/contamViz/issues
