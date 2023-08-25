@@ -20,10 +20,25 @@ plot_score_statistics <- function(x) {
   if(nrow(x) == 0) { stop("Data frame is empty") }
 
   x <- x[!is.na(x$p),]
+  x <- x[x$prev > 1,]
 
-  ggp <- ggplot(x, aes(x = p)) +
+  x$s_p <- ifelse(x$prev == 2, "2",
+           ifelse(x$prev > 2 & x$prev <= 7, "3-7",
+           ifelse(x$prev > 7 & x$prev <= 18, "8-18", "18+")))
+
+  x$s_p <- factor(x$s_p, levels = c("2", "3-7", "8-18", "18+"))
+
+  default_color_palette <- c(
+    "#bccfb4",
+    "#94bb83",
+    "#339444",
+    "#09622a"
+  )
+
+  ggp <- ggplot(x, aes(x = p, fill = s_p)) +
     geom_histogram() +
-    labs(x = "Score statistic", y = "Frequency") +
+    labs(x = "Score statistic", y = "Frequency", fill = "Prevalence") +
+    scale_fill_manual(values = default_color_palette) +
     theme_minimal()
 
   return(ggp)
