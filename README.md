@@ -1,5 +1,3 @@
-# Note: The development of this package is for my own learning and not intended to be taken seriously at this point, so tread carefully.
-
 # contamViz
 
 <!-- badges: start -->
