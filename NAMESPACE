@@ -2,6 +2,7 @@
 
 export(plot_score_statistics)
 export(prune_contaminants)
+export(pull_contaminants)
 import(decontam)
 import(ggplot2)
 import(phyloseq)
