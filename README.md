@@ -1,11 +1,11 @@
-# Note: The development of this package is for my own learning and not intended to be taken seriously at this point [never created an R package before], so tread carefully.
+# Note: The development of this package is for my own learning and not intended to be taken seriously at this point, so tread carefully.
 
 # contamViz
 
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of contamViz is to help visualize the impact of sequence contamination in 16S rRNA marker-gene studies, following the use of decontam [Davis et al., 2018](https://microbiomejournal.biomedcentral.com/articles/10.1186/s40168-018-0605-2).  In many cases, you may want to simply remove the contaminants and move on, but in others, it can be worthwhile to explore sequence contamination in more detail.  This may be especially true if you sequenced multiple batches of samples with numerous types of negative controls in each batch (e.g., extraction controls, library controls or sampling controls).
+The goal of contamViz is to help visualize the impact of sequence contamination in 16S rRNA marker-gene studies, following the use of decontam [Davis et al., 2018](https://microbiomejournal.biomedcentral.com/articles/10.1186/s40168-018-0605-2).  In many cases, you may want to simply remove the contaminants and move on with your analysis, but in others, it can be worthwhile to explore sequence contamination in more detail.  This may be especially true if you sequenced multiple batches of samples with numerous types of negative controls in each batch (e.g., extraction controls, library controls or sampling controls).
 
 ## Installation
 
