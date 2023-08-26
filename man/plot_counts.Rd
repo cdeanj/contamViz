@@ -20,7 +20,6 @@ An object of type ggplot2
 Plots counts of sequence feature
 }
 \examples{
-
 physeq <- readRDS(system.file("extdata", "MUClite.rds", package="decontam"))
-plot_counts(physeq, "Seq1", 'Habitat')
+plot_counts(physeq, otu = "Seq1", group = 'Habitat')
 }
