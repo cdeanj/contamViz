@@ -8,10 +8,13 @@
 #' @export
 #'
 #' @examples
-#'
 #' physeq <- readRDS(system.file("extdata", "MUClite.rds", package="decontam"))
-#' plot_counts(physeq, "Seq1", 'Habitat')
+#' plot_counts(physeq, otu = "Seq1", group = 'Habitat')
 plot_counts <- function(physeq, otu, group) {
+  if(!otu %in% colnames(otu_table(physeq)) & !otu %in% rownames(otu_table(physeq))) {
+    stop('OTU is not present in phyloseq object')
+  }
+
   physeq.filt <- prune_taxa(otu, physeq)
   physeq.melt <- psmelt(physeq.filt)
 
